@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "0070431c-9695-421c-b737-2ee1dc7e5b4c",
+		"name": "PruebaBackend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetServices",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "id",
+						"value": "3232",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/api/services?lang=es",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"services"
+					],
+					"query": [
+						{
+							"key": "lang",
+							"value": "es"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HoursAvaibles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/serviceAvailability?idservice=1&date=2023-01-01",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"serviceAvailability"
+					],
+					"query": [
+						{
+							"key": "idservice",
+							"value": "1"
+						},
+						{
+							"key": "date",
+							"value": "2023-01-01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateBooking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idservice\": 3,\r\n     \"customername\" : \"Carlos\",\r\n     \"customeremail\" : \"carlos@gmail.com\",\r\n      \"bookingday\" : \"2023/01/03\",\r\n       \"bookingtime\" : \"19:00\",\r\n       \"bookingprice\" : 180.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/booking",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"booking"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

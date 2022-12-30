@@ -1,0 +1,17 @@
+version: '1.0'
+
+services:
+
+  db:
+    image: postgres
+    restart: always
+    port:
+      5432
+    environment:
+      POSTGRES_PASSWORD: example
+  
+  adminer:
+    image: adminer
+    restart: always
+    port:
+      8080
